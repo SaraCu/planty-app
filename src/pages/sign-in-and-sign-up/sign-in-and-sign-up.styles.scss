@@ -1,0 +1,48 @@
+.sign-in-and-sign-up-page {
+  height: 100vh;
+  background-image: url("../../images/monstera-vector.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  align-content: center;
+
+  .container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 400px;
+    height: 400px;
+    text-align: center;
+    width: 650px;
+
+    .form {
+      backdrop-filter: blur(10px);
+      width: 300px;
+      height: 400px;
+      backdrop-filter: saturate(180%) blur(10x);
+      display: inline-block;
+      line-height: 1.5;
+      vertical-align: middle;
+      border-radius: 1em;
+      color: #fcb1f2;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    width: 350px;
+    height: 290px;
+    top: 10%;
+
+    .logo {
+      margin-right: 0px;
+    }
+
+    .form {
+      margin-top: -200px;
+    }
+  }
+}

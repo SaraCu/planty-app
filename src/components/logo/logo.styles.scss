@@ -1,0 +1,22 @@
+.logo {
+  font-family: "Pacifico", cursive;
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 50px;
+  color: #fbffb0;
+
+  & h1 {
+    font-size: 5rem;
+  }
+
+  &.pink {
+    color: #ffdcf9;
+  }
+
+  &.small {
+    & h1 {
+      font-size: 1.5rem;
+    }
+  }
+}

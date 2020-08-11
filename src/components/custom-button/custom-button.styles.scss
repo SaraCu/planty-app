@@ -1,0 +1,28 @@
+.custom-button {
+  background-color: #fcb1f2;
+  border: 1px solid #fcb1f2 !important;
+  margin: 15px 5px;
+  color: #2f3c55;
+  width: 133px;
+  height: 35px;
+  border-radius: 0.3rem;
+
+  &.inverted {
+    background-color: #2f3c55;
+    margin: 15px 5px;
+    color: #fcb1f2;
+    width: 125px;
+  }
+
+  &.google-sign-in {
+    width: 270px;
+    margin: 0;
+  }
+
+  &:active,
+  &:focus {
+    border-color: #fcb1f2 !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #fcb1f2;
+    outline: none;
+  }
+}
