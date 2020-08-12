@@ -1,0 +1,81 @@
+.item {
+  width: min-content;
+  position: relative;
+
+  &:hover {
+    .image {
+      opacity: 0.3;
+    }
+    .add-to-cart {
+      display: flex;
+    }
+  }
+
+  .image {
+    width: 267px;
+    z-index: 10;
+  }
+
+  .add-to-cart {
+    position: absolute;
+    top: 40%;
+    z-index: 30;
+    left: 30%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    .btn-transparent {
+      background-color: transparent;
+      border: none;
+
+      .cart {
+        background: url("../../images/cartGray.png") center center no-repeat;
+
+        width: 25px;
+        height: 25px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        // background-repeat: no-repeat;
+        // background-size: 300px 300px;
+        // object-fit: scale-down;
+        cursor: pointer;
+
+        &:hover {
+          background: url("../../images/cartBlue.png") center center no-repeat;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+      }
+
+      &:focus {
+        outline: none !important;
+        outline-offset: none !important;
+      }
+    }
+  }
+
+  .name {
+    text-align: left;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .item {
+    .image {
+      width: 240px;
+    }
+  }
+}
+@media screen and (max-width: 580px) {
+  .item {
+    .image {
+      width: 270px;
+    }
+  }
+}

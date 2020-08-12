@@ -1,8 +1,38 @@
 .gallery {
-  & h1 {
+  background-color: #cfe6e3;
+  position: relative;
+  height: auto;
+  min-height: 100% !important;
+
+  .title {
+    text-shadow: none;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
   }
 
-  &.container {
+  .container {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 960px;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .gallery {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 650px;
+    }
+  }
+}
+@media screen and (max-width: 580px) {
+  .gallery {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 300px;
+    }
   }
 }
