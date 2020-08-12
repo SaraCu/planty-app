@@ -1,0 +1,8 @@
+.gallery {
+  & h1 {
+  }
+
+  &.container {
+    display: grid;
+  }
+}
