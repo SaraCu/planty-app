@@ -18,7 +18,9 @@ class ItemsGallery extends Component {
         <h1 className="title">Gallery</h1>
         <div className="container">
           {items
-            ? items.map((item) => <ItemPreview item={item}></ItemPreview>)
+            ? items.map((item) => (
+                <ItemPreview key={item.id} item={item}></ItemPreview>
+              ))
             : null}
         </div>
       </div>

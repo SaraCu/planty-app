@@ -1,4 +1,4 @@
-import { getImages, getData } from "./items.data";
+import { getData } from "./items.data";
 import { ItemsActionTypes } from "./items.types";
 
 export const fetchData = () => {

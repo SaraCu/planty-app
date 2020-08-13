@@ -9,9 +9,6 @@ import { auth } from "../../firebase/firebase.utils";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 
 import "./header.styles.scss";
-import whiteCart from "../../images/cartWhite.png";
-import pinkCart from "../../images/cartPink.png";
-import greenCart from "../../images/cartGreen.png";
 
 class Header extends Component {
   scrollToPlants() {
@@ -54,6 +51,7 @@ class Header extends Component {
         <Link className="logo-container" to="/home">
           <Logo small pink className="logo" />
         </Link>
+        <div></div>
         <div className="header-links">
           <Link className="header-link" to="/home">
             Home
@@ -76,7 +74,7 @@ class Header extends Component {
             )}
           </div>
           <Link className="header-link" to="/cart">
-            <img className="cart-icon" src={whiteCart} alt="cart"></img>
+            <div id="cart" className="cart" alt="cart"></div>
           </Link>
         </div>
       </div>

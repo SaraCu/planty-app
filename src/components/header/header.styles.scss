@@ -18,10 +18,46 @@
     display: inline-block;
     cursor: pointer;
 
-    .cart-icon {
-      height: 25px;
+    #cart {
+      background-size: cover;
+    }
+    .cart {
       display: inline-flex;
       margin-right: 7px;
+      padding-top: 7px;
+      width: 25px;
+      height: 25px;
+      background-size: cover;
+
+      // -webkit-background-size: cover;
+      // -moz-background-size: cover;
+      // -o-background-size: cover;
+      cursor: pointer;
+      background: url("../../images/cartWhite.png");
+
+      &.full {
+        background: url("../../images/cartGreen.png");
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+
+        &:hover {
+          background: url("../../images/cartPink.png");
+          background-size: cover;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+        }
+      }
+
+      &:hover {
+        background: url("../../images/cartPink.png");
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+      }
     }
 
     &:hover {

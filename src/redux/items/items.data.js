@@ -2,7 +2,9 @@ import { storage, firestore } from "../../firebase/firebase.utils";
 
 export const getItems = async () => {
   const snapshot = await firestore.collection("items").get();
-  return snapshot.docs.map((doc) => doc.data());
+  return snapshot.docs.map((doc) => {
+    return { data: doc.data(), id: doc.id };
+  });
 };
 
 export const getImages = async () => {
@@ -20,8 +22,8 @@ export const getData = async () => {
 
   let result = [];
   items.forEach((item) => {
-    const img = images.find((image) => image.path === item.fileName);
-    result.push({ ...img, ...item });
+    const img = images.find((image) => image.path === item.data.fileName);
+    result.push({ id: item.id, ...img, ...item.data });
   });
   return result;
 };
