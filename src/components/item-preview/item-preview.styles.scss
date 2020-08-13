@@ -1,6 +1,7 @@
 .item {
   width: min-content;
   position: relative;
+  margin-bottom: 20px;
 
   &:hover {
     .image {
@@ -13,6 +14,8 @@
 
   .image {
     width: 267px;
+    height: 400px;
+    object-fit: cover;
     z-index: 10;
   }
 
