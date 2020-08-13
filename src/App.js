@@ -1,15 +1,19 @@
 import React, { Component } from "react";
-import "./App.css";
 import { Route, Redirect } from "react-router";
-import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component.jsx";
-import HomePage from "./pages/home/home.component";
+import Switch from "react-bootstrap/esm/Switch";
+
 import { selectCurrentUser } from "./redux/user/user.selectors";
 import { setCurrentUser } from "./redux/user/user.actions";
 import { createStructuredSelector } from "reselect";
 import { connect } from "react-redux";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
-import Switch from "react-bootstrap/esm/Switch";
+
 import Header from "./components/header/header.component";
+import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component.jsx";
+import HomePage from "./pages/home/home.component";
+import CheckoutPage from "./pages/checkout/checkout.component";
+
+import "./App.css";
 
 class App extends Component {
   unsubscribeFromAuth = null;
@@ -37,16 +41,29 @@ class App extends Component {
   }
 
   render() {
-    const { currentUser } = this.props;
-    document.body.style = currentUser
-      ? "background: #FFDCF9;"
-      : "background: #fbffb0;";
+    const { bodyColor } = this.props;
+    switch (bodyColor) {
+      case "green":
+        document.body.style = "background: #e9f7bc;";
+        break;
+      case "blue":
+        document.body.style = "background: #e9f7bc;";
+        break;
+      case "yellow":
+        document.body.style = "background: #fbffb0;";
+        break;
+      default:
+        document.body.style = "background: #fbffb0;";
+        break;
+    }
+    document.body.style = "background: #e9f7bc;";
 
     return (
       <div className="App">
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/checkout" component={CheckoutPage} />
           <Route
             exact
             path="/signin"

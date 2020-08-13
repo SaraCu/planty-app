@@ -49,7 +49,7 @@ class Header extends Component {
     return (
       <div className="header">
         <Link className="logo-container" to="/home">
-          <Logo small pink className="logo" />
+          <Logo small white className="logo" />
         </Link>
         <div></div>
         <div className="header-links">

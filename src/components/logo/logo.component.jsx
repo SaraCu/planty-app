@@ -2,8 +2,8 @@ import React from "react";
 
 import "./logo.styles.scss";
 
-const Logo = ({ small, pink }) => (
-  <div className={`logo ${small ? "small" : ""} ${pink ? "pink" : ""}`}>
+const Logo = ({ small, white }) => (
+  <div className={`logo ${small ? "small" : ""} ${white ? "white" : ""}`}>
     <h1>Planty</h1>
   </div>
 );

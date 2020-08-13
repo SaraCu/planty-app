@@ -7,6 +7,8 @@ import {
   clearItemFromCart,
 } from "../../redux/cart/cart.actions";
 
+import "./cart-item.styles.scss";
+
 const CartItem = ({ item, addToCart, removeFromCart, clearItemFromCart }) => {
   const { url, name, price, quantity } = item;
   return (
@@ -14,26 +16,20 @@ const CartItem = ({ item, addToCart, removeFromCart, clearItemFromCart }) => {
       <img className="image" src={url} alt="cart item"></img>
       <div className="cart-item-details">
         <div className="name">{name}</div>
-        <div className="price">{price}</div>
-        <div className="quantity">
-          <button
-            className="remove-button"
-            onClick={() => removeFromCart(item)}
-          >
-            +
-          </button>
-          <span>{quantity}</span>
-          <button className="add-button" onClick={() => addToCart(item)}>
-            -
-          </button>
-        </div>
-        <button
-          className="clear-button"
-          onClick={() => clearItemFromCart(item)}
-        >
-          x
+        <div className="price">{price} &euro;</div>
+      </div>
+      <div className="quantity">
+        <button className="remove-button" onClick={() => removeFromCart(item)}>
+          -
+        </button>
+        <div className="quantity-value">{quantity}</div>
+        <button className="add-button" onClick={() => addToCart(item)}>
+          +
         </button>
       </div>
+      <button className="clear-button" onClick={() => clearItemFromCart(item)}>
+        x
+      </button>
     </div>
   );
 };
