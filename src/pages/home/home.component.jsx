@@ -1,12 +1,14 @@
 import React from "react";
-import ItemsGallery from "../../components/items-gallery/items-gallery.component";
 import Home from "../../components/home/home.component";
 
-const HomePage = () => (
-  <div>
-    <Home />
-    <ItemsGallery />
-  </div>
-);
+const HomePage = () => {
+  document.body.style = "background: #e9f7bc;";
+
+  return (
+    <div>
+      <Home />
+    </div>
+  );
+};
 
 export default HomePage;

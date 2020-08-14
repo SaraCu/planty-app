@@ -11,7 +11,8 @@ import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import Header from "./components/header/header.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component.jsx";
 import HomePage from "./pages/home/home.component";
-import CheckoutPage from "./pages/checkout/checkout.component";
+import CartPage from "./pages/cart/cart.component";
+import ShopPage from "./pages/shop/shop.component";
 
 import "./App.css";
 
@@ -41,29 +42,13 @@ class App extends Component {
   }
 
   render() {
-    const { bodyColor } = this.props;
-    switch (bodyColor) {
-      case "green":
-        document.body.style = "background: #e9f7bc;";
-        break;
-      case "blue":
-        document.body.style = "background: #e9f7bc;";
-        break;
-      case "yellow":
-        document.body.style = "background: #fbffb0;";
-        break;
-      default:
-        document.body.style = "background: #fbffb0;";
-        break;
-    }
-    document.body.style = "background: #e9f7bc;";
-
     return (
       <div className="App">
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/checkout" component={CheckoutPage} />
+          <Route exact path="/shop" component={ShopPage} />
+          <Route exact path="/cart" component={CartPage} />
           <Route
             exact
             path="/signin"

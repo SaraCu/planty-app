@@ -48,16 +48,16 @@ class Header extends Component {
 
     return (
       <div className="header">
-        <Link className="logo-container" to="/home">
+        <Link className="logo-container" to="/">
           <Logo small white className="logo" />
         </Link>
         <div></div>
         <div className="header-links">
-          <Link className="header-link" to="/home">
+          <Link className="header-link" to="/">
             Home
           </Link>
           <Link className="header-link" to="/shop">
-            Plants
+            Shop
           </Link>
           <Link className="header-link" to="/contact">
             Contact

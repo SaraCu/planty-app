@@ -9,14 +9,17 @@ import SignUp from "../../components/sign-up/sign-up.component";
 import { selectIsSignIn } from "../../redux/sign-in-and-sign-up/sign-in-and-sign-up.selectors";
 import Logo from "../../components/logo/logo.component";
 
-const SignInAndSignUpPage = ({ isSignIn }) => (
-  <div className="sign-in-and-sign-up-page">
-    <div className="container">
-      <Logo />
-      <div className="form">{isSignIn ? <SignIn /> : <SignUp />}</div>
+const SignInAndSignUpPage = ({ isSignIn }) => {
+  document.body.style = "background: #fbffb0;";
+  return (
+    <div className="sign-in-and-sign-up-page">
+      <div className="container">
+        <Logo />
+        <div className="form">{isSignIn ? <SignIn /> : <SignUp />}</div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const mapStateToProps = createStructuredSelector({
   isSignIn: selectIsSignIn,
