@@ -1,0 +1,21 @@
+.footer {
+  background-color: #fadeff;
+  width: 100%;
+
+  .container {
+    padding: 7px 0;
+
+    .text-muted {
+      color: #6c757d;
+    }
+
+    .link {
+      color: #639ea6;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

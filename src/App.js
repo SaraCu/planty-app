@@ -9,7 +9,8 @@ import { connect } from "react-redux";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 import Header from "./components/header/header.component";
-import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component.jsx";
+import Footer from "./components/footer/footer.component";
+import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 import HomePage from "./pages/home/home.component";
 import CartPage from "./pages/cart/cart.component";
 import ShopPage from "./pages/shop/shop.component";
@@ -61,6 +62,7 @@ class App extends Component {
             }
           />
         </Switch>
+        <Footer />
       </div>
     );
   }
