@@ -39,6 +39,7 @@ class SignUp extends Component {
         confirmPassword: "",
       });
     } catch (error) {
+      alert(error);
       console.error(error);
     }
   };

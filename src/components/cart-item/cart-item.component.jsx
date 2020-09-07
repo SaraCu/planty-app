@@ -8,8 +8,18 @@ import {
 } from "../../redux/cart/cart.actions";
 
 import "./cart-item.styles.scss";
+import { selectCurrentUser } from "../../redux/user/user.selectors";
+import { createStructuredSelector } from "reselect";
+import { selectCartItems } from "../../redux/cart/cart.selectors";
 
-const CartItem = ({ item, addToCart, removeFromCart, clearItemFromCart }) => {
+const CartItem = ({
+  currentUser,
+  item,
+  addToCart,
+  removeFromCart,
+  clearItemFromCart,
+  cartItems,
+}) => {
   const { url, name, price, quantity } = item;
   return (
     <div className="cart-item">
@@ -19,15 +29,24 @@ const CartItem = ({ item, addToCart, removeFromCart, clearItemFromCart }) => {
         <div className="price">{price} &euro;</div>
       </div>
       <div className="quantity">
-        <button className="remove-button" onClick={() => removeFromCart(item)}>
+        <button
+          className="remove-button"
+          onClick={() => removeFromCart(item, currentUser.id, cartItems)}
+        >
           -
         </button>
         <div className="quantity-value">{quantity}</div>
-        <button className="add-button" onClick={() => addToCart(item)}>
+        <button
+          className="add-button"
+          onClick={() => addToCart(item, currentUser.id, cartItems)}
+        >
           +
         </button>
       </div>
-      <button className="clear-button" onClick={() => clearItemFromCart(item)}>
+      <button
+        className="clear-button"
+        onClick={() => clearItemFromCart(item, currentUser.id)}
+      >
         x
       </button>
     </div>
@@ -35,9 +54,15 @@ const CartItem = ({ item, addToCart, removeFromCart, clearItemFromCart }) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  addToCart: (item) => dispatch(addToCart(item)),
-  removeFromCart: (item) => dispatch(removeFromCart(item)),
-  clearItemFromCart: (item) => dispatch(clearItemFromCart(item)),
+  addToCart: (item, id, cartItems) => dispatch(addToCart(item, id, cartItems)),
+  removeFromCart: (item, id, cartItems) =>
+    dispatch(removeFromCart(item, id, cartItems)),
+  clearItemFromCart: (item, id) => dispatch(clearItemFromCart(item, id)),
 });
 
-export default connect(null, mapDispatchToProps)(CartItem);
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  cartItems: selectCartItems,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CartItem);

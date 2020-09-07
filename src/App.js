@@ -16,12 +16,13 @@ import CartPage from "./pages/cart/cart.component";
 import ShopPage from "./pages/shop/shop.component";
 
 import "./App.css";
+import { fetchCartItems } from "./redux/cart/cart.actions";
 
 class App extends Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const { setCurrentUser } = this.props;
+    const { setCurrentUser, getCartItems } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
@@ -31,6 +32,8 @@ class App extends Component {
             id: snapShot.id,
             ...snapShot.data(),
           });
+
+          getCartItems(snapShot.id);
         });
       }
 
@@ -74,6 +77,7 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),
+  getCartItems: (userId) => dispatch(fetchCartItems(userId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

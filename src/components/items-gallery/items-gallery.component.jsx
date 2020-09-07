@@ -4,7 +4,7 @@ import { selectItemsCollection } from "../../redux/items/items.selectors";
 import { createStructuredSelector } from "reselect";
 import { connect } from "react-redux";
 import ItemPreview from "../item-preview/item-preview.component";
-import { fetchData } from "../../redux/items/items.action";
+import { fetchData } from "../../redux/items/items.actions";
 
 class ItemsGallery extends Component {
   componentDidMount() {
