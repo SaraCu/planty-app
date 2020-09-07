@@ -1,0 +1,21 @@
+.cart {
+  .cart-title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .cart-empty-container {
+    .cart-empty-img {
+      height: 60vh;
+    }
+
+    .cart-empty-text {
+      margin-top: 50px;
+
+      .link {
+        color: #639ea6;
+        cursor: pointer;
+      }
+    }
+  }
+}

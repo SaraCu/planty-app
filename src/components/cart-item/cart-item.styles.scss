@@ -1,9 +1,9 @@
 .cart-item {
   display: grid;
-  width: 870px;
-  grid-template-columns: 230px 320px 250px 70px;
+  // width: 870px;
+  // grid-template-columns: 230px 320px 250px 70px;
 
-  //   grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
   margin: 50px;
 
