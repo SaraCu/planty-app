@@ -31,21 +31,21 @@ const CartItem = ({
       <div className="quantity">
         <button
           className="remove-button"
-          onClick={() => removeFromCart(item, currentUser.id, cartItems)}
+          onClick={() => removeFromCart(item, currentUser?.id, cartItems)}
         >
           -
         </button>
         <div className="quantity-value">{quantity}</div>
         <button
           className="add-button"
-          onClick={() => addToCart(item, currentUser.id, cartItems)}
+          onClick={() => addToCart(item, currentUser?.id, cartItems)}
         >
           +
         </button>
       </div>
       <button
         className="clear-button"
-        onClick={() => clearItemFromCart(item, currentUser.id)}
+        onClick={() => clearItemFromCart(item, currentUser?.id)}
       >
         x
       </button>

@@ -16,7 +16,7 @@ const ItemPreview = ({ currentUser, item, addToCart, cartItems }) => {
         {price} &euro; &bull; {"  "}
         <button
           className="btn-transparent"
-          onClick={() => addToCart(item, currentUser.id, cartItems)}
+          onClick={() => addToCart(item, currentUser?.id, cartItems)}
         >
           <div className="cart"></div>
         </button>

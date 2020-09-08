@@ -1,0 +1,136 @@
+.contact-container {
+  width: 100%;
+  background-color: #d0d7f5;
+  font-size: larger;
+  padding: 50px;
+  position: relative;
+}
+
+.title {
+  margin-bottom: 40px;
+}
+
+.icons {
+  width: 70px;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(4deg);
+  }
+}
+
+.icons:hover {
+  -webkit-animation: wiggle 0.5s infinite;
+  -moz-animation: wiggle 0.5s infinite;
+  animation: wiggle 0.5s infinite;
+  border-color: #fcb1f2 !important;
+  border-radius: 0.7em;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.btn-icon {
+  margin-bottom: 100px;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-icon:focus {
+  outline: none !important;
+  outline-offset: none !important;
+}
+
+.icons-row {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plant-contact {
+  height: 40vh;
+  margin-bottom: 70px;
+}
+
+.form-group.row {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.subscribe.form-control {
+  display: inline-block;
+  min-width: 500px;
+  width: auto;
+  margin-right: 20px;
+}
+
+.subscribe.form-control:focus,
+.subscribe.form-control:active {
+  border-color: #fcb1f2 !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #fcb1f2;
+}
+
+.subscribe {
+  display: inline-block;
+}
+
+.subscribe-label {
+  text-align: right;
+  align-self: baseline;
+}
+
+.subscribe-email {
+  text-align: left;
+  align-self: baseline;
+}
+
+@media screen and (max-width: 992px) {
+  .subscribe-label {
+    text-align: center;
+  }
+
+  .subscribe-email {
+    text-align: center;
+  }
+
+  .subscribe.form-control {
+    min-width: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .subscribe.form-control {
+    min-width: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .subscribe.form-control {
+    min-width: 150px;
+  }
+}
+
+.subscribe.row {
+  align-items: center;
+  justify-content: center;
+}
+
+.remove.subscribe {
+  margin-top: 15px;
+  border: 1px solid #7da8a6;
+  border-radius: 1em;
+  text-align: center;
+  justify-content: center;
+  padding: 15px;
+  display: inline-block;
+  margin-left: 15px;
+  background-color: transparent;
+}

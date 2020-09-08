@@ -17,6 +17,7 @@ import ShopPage from "./pages/shop/shop.component";
 
 import "./App.css";
 import { fetchCartItems } from "./redux/cart/cart.actions";
+import ContactPage from "./pages/contact/contact.component";
 
 class App extends Component {
   unsubscribeFromAuth = null;
@@ -53,6 +54,7 @@ class App extends Component {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/shop" component={ShopPage} />
           <Route exact path="/cart" component={CartPage} />
+          <Route exact path="/contact" component={ContactPage} />
           <Route
             exact
             path="/signin"
