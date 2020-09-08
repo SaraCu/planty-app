@@ -1,47 +1,50 @@
-.title {
-  font-size: 1.7em;
-  font-weight: 600;
-  display: block;
-  // text-shadow: 0 0 2px #000;
-  // -moz-text-shadow: 0 0 2px #000;
-  // -webkit-text-shadow: 0 0 2px #000;
-}
-
-.email-input,
-.password-input {
-  background-color: #fbffb0 !important;
-  border: 1px solid #fcb1f2;
-  color: #2f3c55;
-  width: 256px;
-  height: 35px;
-  border-radius: 0.3rem;
-  font-size: medium;
-  padding: 1px 7px;
-  margin: 5px 0;
-
-  &:active,
-  &:focus {
-    border-color: #fcb1f2 !important;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #fcb1f2 !important;
-    color: #2f3c55 !important;
-    outline: none !important;
+.sign-in {
+  .title {
+    margin-bottom: 10px;
+    font-size: 1.7em;
+    font-weight: 600;
+    display: block;
+    // text-shadow: 0 0 2px #000;
+    // -moz-text-shadow: 0 0 2px #000;
+    // -webkit-text-shadow: 0 0 2px #000;
   }
-}
 
-.email,
-.password {
-  margin-top: 20px;
-  display: inline-block;
-}
+  .email-input,
+  .password-input {
+    background-color: #fbffb0 !important;
+    border: 1px solid #fcb1f2;
+    color: #2f3c55;
+    width: 256px;
+    height: 35px;
+    border-radius: 0.3rem;
+    font-size: medium;
+    padding: 1px 7px;
+    margin: 5px 0;
 
-.buttons-container {
-  margin-top: 30px;
-}
+    &:active,
+    &:focus {
+      border-color: #fcb1f2 !important;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #fcb1f2 !important;
+      color: #2f3c55 !important;
+      outline: none !important;
+    }
+  }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  transition: background-color 5000s ease-in-out 0s;
-  -webkit-text-fill-color: #2f3c55;
+  .email,
+  .password {
+    margin-top: 20px;
+    display: inline-block;
+  }
+
+  .buttons-container {
+    margin-top: 30px;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #2f3c55;
+  }
 }

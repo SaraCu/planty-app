@@ -54,7 +54,7 @@ class SignUp extends Component {
     const { toggleIsSignIn } = this.props;
 
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="sign-in" onSubmit={this.handleSubmit}>
         <label className="title">Sign up</label>
         <label className="email">Email address</label>
         <input

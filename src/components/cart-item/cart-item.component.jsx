@@ -1,5 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { X } from "react-bootstrap-icons";
 
 import {
   addToCart,
@@ -8,8 +10,8 @@ import {
 } from "../../redux/cart/cart.actions";
 
 import "./cart-item.styles.scss";
+
 import { selectCurrentUser } from "../../redux/user/user.selectors";
-import { createStructuredSelector } from "reselect";
 import { selectCartItems } from "../../redux/cart/cart.selectors";
 
 const CartItem = ({
@@ -47,7 +49,7 @@ const CartItem = ({
         className="clear-button"
         onClick={() => clearItemFromCart(item, currentUser?.id)}
       >
-        x
+        <X width="1.5em" height="1.5em" className="bi bi-x"></X>
       </button>
     </div>
   );
